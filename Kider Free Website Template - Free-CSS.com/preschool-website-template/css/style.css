@@ -1,4 +1,85 @@
 /********** Template CSS **********/
+/* Scheme Cards */
+.schemes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.scheme-card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.scheme-card:hover {
+    transform: translateY(-10px);
+}
+
+.scheme-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.scheme-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.scheme-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.scheme-info h6 {
+    margin: 5px 0;
+    color: var(--primary-color);
+}
+
+.scheme-info small {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.apply-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .scheme-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .scheme-card {
+        flex: 1 1 100%;
+    }
+}
+
 :root {
     --primary: #FE5D37;
     --light: #FFF5F3;
@@ -11,6 +92,35 @@
     right: 45px;
     bottom: 45px;
     z-index: 99;
+}
+
+.colorblind-mode {
+    --primary: #0072B2;  /* Blue, distinguishable from red/green */
+    --light: #E6E6FA;  /* Light lavender for contrast */
+    --dark: #222222;  /* Darker gray for better readability */
+    --bg-color: #1E1E1E;  /* Dark grayish black for better contrast */
+    --text-color: #0072B2;  /* Deep navy blue for strong contrast */
+    --button-color: #009E73;  /* Greenish teal, distinct from blue and red */
+}
+
+
+/* Apply the colors to elements */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--dark);
+}
+
+.navbar a {
+    color: var(--primary);
+}
+
+button {
+    background-color: var(--button-color);
+    color: var(--text-color);
 }
 
 
@@ -500,4 +610,16 @@ h6,
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;  /* Ensure background is set */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;  /* Adjust width if needed */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
 }
