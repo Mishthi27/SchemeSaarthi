@@ -93,7 +93,7 @@ h6,
 }
 
 .font-secondary {
-    font-family: 'Lobster Two', cursive;
+    font-family: 'Lexend', cursive;
 }
 
 
@@ -118,7 +118,7 @@ h6,
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Lexend";
     font-weight: 900;
     vertical-align: middle;
     margin-left: 5px;
