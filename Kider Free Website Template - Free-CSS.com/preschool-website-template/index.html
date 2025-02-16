@@ -4,6 +4,26 @@
 <head>
     <meta charset="utf-8">
     <title>SchemeSaarthi</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+        }
+        .colorblind-mode {
+            background-color:#FFA500;
+            color: #007BFF;
+        }
+        .toggle-btn {
+            padding: 10px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color:#007BFF;
+            color: #FFA500;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -54,24 +74,30 @@
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About Us</a>
-                    <a href="classes.html" class="nav-item nav-link">Find Schemes</a>
-                    <a href="classes.html" class="nav-item nav-link">Resources</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"></a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Find Schemes</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">New Schemes</a>
+                            <a href="facility.html" class="dropdown-item">Active Schemes</a>
                             <a href="team.html" class="dropdown-item">Upcoming Schemes</a>
-                            <a href="call-to-action.html" class="dropdown-item"></a>
+                            <!-- <a href="call-to-action.html" class="dropdown-item"></a>
                             <a href="appointment.html" class="dropdown-item">Make Appointment</a>
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
+                            <a href="404.html" class="dropdown-item">404 Error</a> -->
                         </div>
                     </div>
+                    <a href="classes.html" class="nav-item nav-link">Chatbot</a>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
                 <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Search<i class="fa fa-arrow-right ms-3"></i></a>
+
+                <button class="toggle-btn ms-3" onclick="toggleColorblindMode()">Colorblind Mode</button>
             </div>
         </nav>
+        <script>
+            function toggleColorblindMode() {
+                document.body.classList.toggle('colorblind-mode');
+            }
+        </script>
         <!-- Navbar End -->
 
 
